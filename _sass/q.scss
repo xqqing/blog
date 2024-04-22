@@ -3,5 +3,12 @@
 html {
     >body {
         font-family: "JetBrains Mono", "PingFangSC-Regular", "Monaco", "Menlo";
+
+        .site-header {
+            background-color: white;
+            position: sticky;
+            top: 0;
+            border-top: 0;
+        }
     }
 }
