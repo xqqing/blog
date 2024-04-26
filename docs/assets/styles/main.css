@@ -1,0 +1,152 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "AliFangYuan";
+  src: url("/blog/assets/fonts/Ali-FangYuanTi.woff2") format("woff2");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "SmileySans";
+  src: url("/blog/assets/fonts/SmileySans-Oblique.woff2") format("woff2");
+  font-weight: 400;
+}
+body {
+  font-family: "华文仿宋", "Monaco", "JetBrains Mono", "Courier New", "Andale Mono", AliFangYuan, SmileySans, "Menlo", "PingFangSC-Regular";
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  width: 100vw;
+  overflow: hidden auto;
+}
+body .site-header {
+  min-height: 54px;
+  background-color: white;
+  position: sticky;
+  top: 0;
+  border-top: 0;
+  min-height: unset;
+}
+body .site-header .site-title {
+  font-size: 34px;
+}
+body .site-header .page-link {
+  font-size: medium;
+}
+
+table {
+  font-family: SmileySans;
+}
+
+pre {
+  text-wrap: wrap;
+}
+
+label {
+  margin: unset;
+}
+
+.post-header {
+  display: none;
+}
+
+.home {
+  font-size: 22px;
+}
+
+.site-nav .page-link {
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .site-nav {
+    position: unset;
+    background-color: unset;
+    border: unset;
+    border-radius: unset;
+    text-align: unset;
+  }
+  .site-nav label[for=nav-trigger] {
+    display: none;
+  }
+  .site-nav .page-link {
+    display: unset;
+    padding: unset;
+    margin-left: unset;
+  }
+  .site-nav input ~ .trigger {
+    display: unset;
+    clear: unset;
+  }
+}
+.site-header .categories {
+  display: none;
+}
+.site-header .category:hover ~ .categories {
+  display: block;
+  position: absolute;
+  top: 0px;
+  right: 35px;
+  background-color: #fdfdfd;
+  border: 1px solid #e8e8e8;
+  border-radius: 5px;
+  text-align: right;
+}
+
+.site-header .wrapper {
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  min-height: 50px;
+}
+.site-header .wrapper .site-title {
+  line-height: initial;
+}
+.site-header .wrapper .btn-group {
+  margin: initial;
+}
+.site-header .wrapper .page-link {
+  font-size: 28px;
+  margin: initial;
+  line-height: initial;
+}
+.site-header .wrapper .dropdown-menu {
+  min-width: 100%;
+  left: 50%;
+  transform: translate(-50%);
+}
+.site-header .wrapper .dropdown-menu li {
+  text-align: center;
+}
+.site-header .wrapper .dropdown-menu::after, .site-header .wrapper .dropdown-menu::before {
+  left: 50%;
+  transform: translate(-50%);
+}
+.site-header .wrapper .site-title:hover + .dropdown-menu {
+  display: block;
+}
+.site-header .wrapper .site-begin {
+  display: flex;
+  align-items: center;
+}
+.site-header .wrapper:after {
+  display: none;
+}
+.site-header .wrapper .navbar {
+  display: none;
+  margin: 0;
+}
+.site-header .wrapper .navbar .navbar-inner {
+  min-height: unset;
+  padding: 0;
+}
+.site-header .wrapper .navbar .navbar-inner .nav {
+  margin: 0;
+}
+.site-header .wrapper .navbar .navbar-inner .nav .dropdown-toggle {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/*# sourceMappingURL=main.css.map */
