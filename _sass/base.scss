@@ -1,0 +1,111 @@
+html {
+    // overflow-x: hidden;
+    // overflow: hidden auto;
+}
+
+body {
+    font-family: '华文仿宋', "Monaco", "JetBrains Mono", 'Courier New', 'Andale Mono', AliFangYuan, SmileySans, "Menlo", "PingFangSC-Regular";
+    // font-variation-settings: 'wght' 400, 'BEVL' 50; //可变字体设置
+    // font-weight: 400;
+    font-size: 16px;
+    // 固定宽度，不会因为滚动条显隐引起内容抖动
+    margin: 0;
+    padding: 0;
+    border: 0;
+    width: 100vw; //body宽度设置为布局视口宽度，布局视口宽度不受滚动条显隐影响
+    overflow: hidden auto; //X溢出不显示水平滚动条，可以显示溢出内容visible或隐藏hidden
+    // position: absolute;
+
+    .site-header {
+        min-height: 54px;
+        background-color: white;
+        position: sticky;
+        top: 0;
+        border-top: 0;
+        min-height: unset; //非继承属性时unset相当于initial
+
+        .site-title {
+            font-size: 34px;
+        }
+
+        .page-link {
+            font-size: medium;
+        }
+    }
+}
+
+table {
+    font-family: SmileySans;
+}
+
+pre {
+    text-wrap: wrap; //换行
+}
+
+label {
+    margin: unset;
+}
+
+.post-header {
+    display: none; //去掉表格顶部空白
+}
+
+.home {
+    // font-family: alifangyuan;
+    // font-weight: normal;
+    font-size: 22px;
+    // font-weight: 625;
+}
+
+.site-nav {
+    .page-link {
+        // &:not(:last-child) {
+        margin-right: 10px;
+        // }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .site-nav {
+        position: unset;
+        background-color: unset;
+        border: unset;
+        border-radius: unset;
+        text-align: unset;
+
+        label[for=nav-trigger] {
+            display: none;
+        }
+
+        .page-link {
+            display: unset;
+            padding: unset;
+            margin-left: unset;
+
+        }
+
+        input~.trigger {
+            display: unset;
+            clear: unset;
+        }
+    }
+}
+
+.site-header {
+    .categories {
+        display: none;
+    }
+
+    .category:hover~.categories {
+        // cursor: pointer;
+        display: block;
+        position: absolute;
+        top: 0px;
+        right: 35px;
+        background-color: #fdfdfd;
+        border: 1px solid #e8e8e8;
+        border-radius: 5px;
+        text-align: right;
+    }
+
+}

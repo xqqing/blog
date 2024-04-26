@@ -1,0 +1,61 @@
+<header class="site-header" role="banner">
+  <div class="wrapper">
+    {%- assign default_paths = site.pages | map: "path" -%}
+    {%- assign page_paths = site.header_pages | default: default_paths -%}
+
+    <a
+      class="site-title"
+      rel="author"
+      href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+
+    {% comment %} 中间导航 {% endcomment %}
+    <ul class="btn-group">
+      {% for item in site.web %}
+        <li class="btn-group">
+          <a
+            class="btn dropdown dropdown-toggle"
+            data-toggle="dropdown"
+            href="#">
+            {{ item.title | upcase }}
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            {% for item2 in site[item.slug] %}
+              <li>
+                <a href="{{item2.url|relative_url}}">{{ item2.title }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        </li>
+      {% endfor %}
+    </ul>
+
+    <div class="navbar">
+      <div class="navbar-inner">
+        <a class="brand" href="#">Title</a>
+        <ul class="nav">
+          {% for item in site.web %}
+            <li class="dropdown">
+              <a
+                class="dropdown-toggle"
+                data-toggle="dropdown"
+                href="#">
+                {{ item.title | upcase }}
+                <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                {% for item2 in site[item.slug] %}
+                  <li>
+                    <a href="{{item2.url|relative_url}}">{{ item2.title }}</a>
+                  </li>
+                {% endfor %}
+              </ul>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+
+    <a class="page-link" href="{{ '/words/' | relative_url }}">🎯</a>
+  </div>
+</header>

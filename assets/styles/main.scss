@@ -1,0 +1,15 @@
+--- 
+---
+
+@font-face {
+    font-family: 'AliFangYuan';
+    src: url('{{ '/assets/fonts/Ali-FangYuanTi.woff2' | relative_url }}') format('woff2');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'SmileySans';
+    src: url('{{ '/assets/fonts/SmileySans-Oblique.woff2' | relative_url }}') format('woff2');
+    font-weight: 400;
+}
+
+@import 'base.scss', 'header';

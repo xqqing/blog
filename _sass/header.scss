@@ -1,0 +1,75 @@
+.site-header {
+    .wrapper {
+        padding: 0 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        display: flex;
+        min-height: 50px;
+
+        .site-title {
+            line-height: initial;
+        }
+
+        .btn-group {
+            margin: initial;
+        }
+
+        .page-link {
+            font-size: 28px;
+            margin: initial;
+            line-height: initial;
+        }
+
+        .dropdown {}
+
+        .dropdown-menu {
+            min-width: 100%; //设置最小宽度等于父级块宽度
+            left: 50%; //针对父级块宽度百分比
+            transform: translate(-50%); //针对自己宽度百分比
+
+            li {
+                text-align: center;
+            }
+
+            &::after,
+            &::before {
+                left: 50%;
+                transform: translate(-50%);
+            }
+        }
+
+        .site-title:hover+.dropdown-menu {
+            display: block;
+        }
+
+        .site-begin {
+            display: flex;
+            align-items: center;
+        }
+
+        &:after {
+            display: none;
+        }
+
+        .navbar {
+            display: none;
+            margin: 0;
+
+            .navbar-inner {
+                min-height: unset;
+                padding: 0;
+
+                .nav {
+                    margin: 0;
+
+                    .dropdown-toggle {
+                        padding-top: 0;
+                        padding-bottom: 0;
+                    }
+                }
+
+            }
+        }
+    }
+}

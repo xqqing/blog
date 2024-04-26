@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Your awesome title
+title: ⛰️
 email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
@@ -55,4 +55,21 @@ plugins:
 #   - vendor/gems/
 #   - vendor/ruby/
 
-destination: ./docs
+destination: docs #q:设置输出目录
+# collections_dir: _guides #q:设置集合目录，_posts也是集合也要修改
+
+collections:
+  web: #html/css/js
+    output: true
+  css: #font/text/selector
+    output: true
+    
+
+# defaults:
+#   - scope:
+#       path: 'assets/images'
+#     values:
+#       image: true
+
+
+

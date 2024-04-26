@@ -1,0 +1,4 @@
+---
+layout: post
+---
+{{page.title}}
