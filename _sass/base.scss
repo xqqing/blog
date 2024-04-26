@@ -46,6 +46,10 @@ label {
     margin: unset;
 }
 
+a:hover {
+    text-decoration: none;
+}
+
 .post-header {
     display: none; //去掉表格顶部空白
 }
