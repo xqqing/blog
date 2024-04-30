@@ -1,26 +1,12 @@
 ---
 layout: default
+homehtml: homehtml
 ---
 
 <div class="home">
-  <h1>site.web</h1>
-  {% comment %} {{ site.web.size }} {% endcomment %}
-  {% for item in site.web %}
-    {% comment %} <pre>{{item}}</pre> {% endcomment %}
-    {% for elem in item %}
-      {% if elem != 'output' and elem != 'previous' and elem != 'next' %}
-<pre>{{elem}} = {{item[elem]}}</pre>
-      {% endif %}
-    {% endfor %}
-  {% endfor %}
-
-  <h1>page</h1>
-  {% for item in page %}
-<pre>{{ item[0] }} = {{ item[1] }} </pre>
-{% endfor %}
+  {{ content }}
 
   <!-- {%- if page.title -%}<h1 class="page-heading">{{ page.title }}</h1>{%- endif -%} -->
-  {{ content }}
 
   {%- if site.posts.size > 0 -%}
     <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>

@@ -1,10 +1,5 @@
-html {
-    // overflow-x: hidden;
-    // overflow: hidden auto;
-}
-
 body {
-    font-family: '华文仿宋', "Monaco", "JetBrains Mono", 'Courier New', 'Andale Mono', AliFangYuan, SmileySans, "Menlo", "PingFangSC-Regular";
+    font-family: "JetBrains Mono", "苹方-简", "圆体-简", '华文仿宋', SmileySans, AliFangYuan, "Monaco", 'Courier New', 'Andale Mono', "Menlo";
     // font-variation-settings: 'wght' 400, 'BEVL' 50; //可变字体设置
     // font-weight: 400;
     font-size: 16px;
@@ -35,7 +30,12 @@ body {
 }
 
 table {
-    font-family: SmileySans;
+    font-family: inherit;
+}
+
+code,
+pre {
+    font-family: inherit;
 }
 
 pre {
@@ -112,4 +112,9 @@ a:hover {
         text-align: right;
     }
 
+}
+
+// bootstrap
+.label {
+    font-weight: initial;
 }

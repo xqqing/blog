@@ -1,0 +1,36 @@
+---
+layout: default
+---
+
+
+<div class="collections">
+  <table>
+    <tr>
+      <th>文章</th>
+      <th>摘要</th>
+      <th>参考</th>
+    </tr>
+    {% for item in site[page.slug] %}
+      <tr>
+        <td>
+          <a href="{{ item.url|relative_url }}">{{ item.title }}</a>
+          {% if item.level == 1 %}
+            <span class="label label-important">重要</span>
+          {% else if item.level == 2 %}
+            <span class="label label-warning">重视</span>
+          {% endif %}
+        </td>
+        <td>{{ item.summary }}</td>
+        <td>
+          {% assign url = item.guide | split: '/' %}
+          <a href="{{item.guide}}">{{ url[2] }}</a>
+        </td>
+      </tr>
+      {% comment %} {% for elem in item %}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                            {{ elem }} = {{ item[elem] }}
+                                                                                                                                                                                                                                                                                                                                              {% endfor %} {% endcomment %}
+    {% endfor %}
+  </table>
+  {{ content }}
+
+</div>
