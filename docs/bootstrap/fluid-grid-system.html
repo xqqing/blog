@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang=" en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>流式网格系统 | ⛰️</title>
+<meta name="generator" content="Jekyll v4.3.3" />
+<meta property="og:title" content="流式网格系统" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="流式网格系统 声明类选择器.row-fluid，和它的伪类选择器.row-fluid::before/after 宽度为父容器宽度100%" />
+<meta property="og:description" content="流式网格系统 声明类选择器.row-fluid，和它的伪类选择器.row-fluid::before/after 宽度为父容器宽度100%" />
+<link rel="canonical" href="http://localhost:4000/blog/bootstrap/fluid-grid-system.html" />
+<meta property="og:url" content="http://localhost:4000/blog/bootstrap/fluid-grid-system.html" />
+<meta property="og:site_name" content="⛰️" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-05-01T06:58:27+08:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="流式网格系统" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-05-01T06:58:27+08:00","datePublished":"2024-05-01T06:58:27+08:00","description":"流式网格系统 声明类选择器.row-fluid，和它的伪类选择器.row-fluid::before/after 宽度为父容器宽度100%","headline":"流式网格系统","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/bootstrap/fluid-grid-system.html"},"url":"http://localhost:4000/blog/bootstrap/fluid-grid-system.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/blog/assets/main.css">
+  <link rel="stylesheet" href="/blog/assets/styles/normalize.css" media="screen">
+  <link rel="stylesheet" href="/blog/assets/styles/bootstrap.min.css" media="screen">
+  <link rel="stylesheet" href="/blog/assets/styles/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="⛰️" /></head><body><header class="site-header" role="banner">
+  <div class="wrapper"><a
+      class="site-title"
+      rel="author"
+      href="/blog/">⛰️</a>
+
+    
+    <ul class="btn-group">
+      
+        <li class="btn-group">
+          <a
+            class="btn dropdown dropdown-toggle"
+            data-toggle="dropdown"
+            href="#">
+            CSS
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            
+              <li>
+                <a href="/blog/css/bootstrap.html">Bootstrap</a>
+              </li>
+            
+              <li>
+                <a href="/blog/css/css-first.html">CSS入门</a>
+              </li>
+            
+              <li>
+                <a href="/blog/css/css-font.html">Css Font</a>
+              </li>
+            
+              <li>
+                <a href="/blog/css/css-selectors.html">CSS选择器</a>
+              </li>
+            
+              <li>
+                <a href="/blog/css/css-text.html">Css Text</a>
+              </li>
+            
+              <li>
+                <a href="/blog/css/ext-less.html">Ext Less</a>
+              </li>
+            
+              <li>
+                <a href="/blog/css/ext-sass.html">Ext Sass</a>
+              </li>
+            
+          </ul>
+        </li>
+      
+        <li class="btn-group">
+          <a
+            class="btn dropdown dropdown-toggle"
+            data-toggle="dropdown"
+            href="#">
+            HTML
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            
+              <li>
+                <a href="/blog/html/base.html">HTML基础</a>
+              </li>
+            
+              <li>
+                <a href="/blog/html/elements.html">HTML元素</a>
+              </li>
+            
+          </ul>
+        </li>
+      
+        <li class="btn-group">
+          <a
+            class="btn dropdown dropdown-toggle"
+            data-toggle="dropdown"
+            href="#">
+            JS
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            
+              <li>
+                <a href="/blog/js/jquery.html">jQuery</a>
+              </li>
+            
+          </ul>
+        </li>
+      
+        <li class="btn-group">
+          <a
+            class="btn dropdown dropdown-toggle"
+            data-toggle="dropdown"
+            href="#">
+            X
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            
+              <li>
+                <a href="/blog/x/android.html">Android</a>
+              </li>
+            
+              <li>
+                <a href="/blog/x/ios.html">Ios</a>
+              </li>
+            
+              <li>
+                <a href="/blog/x/jekyll.html">Jekyll</a>
+              </li>
+            
+              <li>
+                <a href="/blog/x/liquid.html">Liquid</a>
+              </li>
+            
+          </ul>
+        </li>
+      
+    </ul>
+
+    <div class="navbar">
+      <div class="navbar-inner">
+        <a class="brand" href="#">Title</a>
+        <ul class="nav">
+          
+            <li class="dropdown">
+              <a
+                class="dropdown-toggle"
+                data-toggle="dropdown"
+                href="#">
+                CSS
+                <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                
+                  <li>
+                    <a href="/blog/css/bootstrap.html">Bootstrap</a>
+                  </li>
+                
+                  <li>
+                    <a href="/blog/css/css-first.html">CSS入门</a>
+                  </li>
+                
+                  <li>
+                    <a href="/blog/css/css-font.html">Css Font</a>
+                  </li>
+                
+                  <li>
+                    <a href="/blog/css/css-selectors.html">CSS选择器</a>
+                  </li>
+                
+                  <li>
+                    <a href="/blog/css/css-text.html">Css Text</a>
+                  </li>
+                
+                  <li>
+                    <a href="/blog/css/ext-less.html">Ext Less</a>
+                  </li>
+                
+                  <li>
+                    <a href="/blog/css/ext-sass.html">Ext Sass</a>
+                  </li>
+                
+              </ul>
+            </li>
+          
+            <li class="dropdown">
+              <a
+                class="dropdown-toggle"
+                data-toggle="dropdown"
+                href="#">
+                HTML
+                <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                
+                  <li>
+                    <a href="/blog/html/base.html">HTML基础</a>
+                  </li>
+                
+                  <li>
+                    <a href="/blog/html/elements.html">HTML元素</a>
+                  </li>
+                
+              </ul>
+            </li>
+          
+            <li class="dropdown">
+              <a
+                class="dropdown-toggle"
+                data-toggle="dropdown"
+                href="#">
+                JS
+                <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                
+                  <li>
+                    <a href="/blog/js/jquery.html">jQuery</a>
+                  </li>
+                
+              </ul>
+            </li>
+          
+            <li class="dropdown">
+              <a
+                class="dropdown-toggle"
+                data-toggle="dropdown"
+                href="#">
+                X
+                <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                
+                  <li>
+                    <a href="/blog/x/android.html">Android</a>
+                  </li>
+                
+                  <li>
+                    <a href="/blog/x/ios.html">Ios</a>
+                  </li>
+                
+                  <li>
+                    <a href="/blog/x/jekyll.html">Jekyll</a>
+                  </li>
+                
+                  <li>
+                    <a href="/blog/x/liquid.html">Liquid</a>
+                  </li>
+                
+              </ul>
+            </li>
+          
+        </ul>
+      </div>
+    </div>
+
+    <a class="page-link" href="/blog/words/">🎯</a>
+  </div>
+</header><main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <h2 id="流式网格系统">流式网格系统</h2>
+<ul>
+  <li>声明类选择器<code class="language-plaintext highlighter-rouge">.row-fluid</code>，和它的伪类选择器<code class="language-plaintext highlighter-rouge">.row-fluid::before/after</code></li>
+  <li>宽度为父容器宽度100%</li>
+</ul>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="nc">.row-fluid</span> <span class="p">{</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>
+  <span class="err">*</span><span class="py">zoom</span><span class="p">:</span> <span class="m">1</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.row-fluid</span><span class="nd">:before</span><span class="o">,</span>
+<span class="nc">.row-fluid</span><span class="nd">:after</span> <span class="p">{</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="n">table</span><span class="p">;</span>
+  <span class="nl">line-height</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+  <span class="nl">content</span><span class="p">:</span> <span class="s1">""</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.row-fluid</span><span class="nd">:after</span> <span class="p">{</span>
+  <span class="nl">clear</span><span class="p">:</span> <span class="nb">both</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<ul>
+  <li>声明后代组合器<code class="language-plaintext highlighter-rouge">.row-fluid [class*="span"]</code></li>
+  <li>声明后代组合器及伪类选择器<code class="language-plaintext highlighter-rouge">.row-fluid [class*="span"]:first-child</code>，去掉首个<code class="language-plaintext highlighter-rouge">span*</code>元素的左边距，就不需要设置<code class="language-plaintext highlighter-rouge">.row-fluid</code>的左边距为负数了。</li>
+  <li>声明后代组合器<code class="language-plaintext highlighter-rouge">.row-fluid .span1</code>，设置<code class="language-plaintext highlighter-rouge">span*</code>宽度百分比</li>
+</ul>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.row-fluid</span> <span class="o">[</span><span class="nt">class</span><span class="o">*=</span><span class="s1">"span"</span><span class="o">]</span> <span class="p">{</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="nb">block</span><span class="p">;</span>
+  <span class="nl">float</span><span class="p">:</span> <span class="nb">left</span><span class="p">;</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>
+  <span class="nl">min-height</span><span class="p">:</span> <span class="m">30px</span><span class="p">;</span>
+  <span class="nl">margin-left</span><span class="p">:</span> <span class="m">2.127659574468085%</span><span class="p">;</span>
+  <span class="err">*</span><span class="nl">margin-left</span><span class="p">:</span> <span class="m">2.074468085106383%</span><span class="p">;</span>
+  <span class="nl">-webkit-box-sizing</span><span class="p">:</span> <span class="n">border-box</span><span class="p">;</span>
+     <span class="nl">-moz-box-sizing</span><span class="p">:</span> <span class="n">border-box</span><span class="p">;</span>
+          <span class="nl">box-sizing</span><span class="p">:</span> <span class="n">border-box</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.row-fluid</span> <span class="o">[</span><span class="nt">class</span><span class="o">*=</span><span class="s1">"span"</span><span class="o">]</span><span class="nd">:first-child</span> <span class="p">{</span>
+  <span class="nl">margin-left</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.row-fluid</span> <span class="nc">.controls-row</span> <span class="o">[</span><span class="nt">class</span><span class="o">*=</span><span class="s1">"span"</span><span class="o">]</span> <span class="o">+</span> <span class="o">[</span><span class="nt">class</span><span class="o">*=</span><span class="s1">"span"</span><span class="o">]</span> <span class="p">{</span>
+  <span class="nl">margin-left</span><span class="p">:</span> <span class="m">2.127659574468085%</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.row-fluid</span> <span class="nc">.span12</span> <span class="p">{</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>
+  <span class="err">*</span><span class="nl">width</span><span class="p">:</span> <span class="m">99.94680851063829%</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.row-fluid</span> <span class="nc">.span11</span> <span class="p">{</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">91.48936170212765%</span><span class="p">;</span>
+  <span class="err">*</span><span class="nl">width</span><span class="p">:</span> <span class="m">91.43617021276594%</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.row-fluid</span> <span class="nc">.span10</span> <span class="p">{</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">82.97872340425532%</span><span class="p">;</span>
+  <span class="err">*</span><span class="nl">width</span><span class="p">:</span> <span class="m">82.92553191489361%</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.row-fluid</span> <span class="nc">.span9</span> <span class="p">{</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">74.46808510638297%</span><span class="p">;</span>
+  <span class="err">*</span><span class="nl">width</span><span class="p">:</span> <span class="m">74.41489361702126%</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.row-fluid</span> <span class="nc">.span8</span> <span class="p">{</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">65.95744680851064%</span><span class="p">;</span>
+  <span class="err">*</span><span class="nl">width</span><span class="p">:</span> <span class="m">65.90425531914893%</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.row-fluid</span> <span class="nc">.span7</span> <span class="p">{</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">57.44680851063829%</span><span class="p">;</span>
+  <span class="err">*</span><span class="nl">width</span><span class="p">:</span> <span class="m">57.39361702127659%</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.row-fluid</span> <span class="nc">.span6</span> <span class="p">{</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">48.93617021276595%</span><span class="p">;</span>
+  <span class="err">*</span><span class="nl">width</span><span class="p">:</span> <span class="m">48.88297872340425%</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.row-fluid</span> <span class="nc">.span5</span> <span class="p">{</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">40.42553191489362%</span><span class="p">;</span>
+  <span class="err">*</span><span class="nl">width</span><span class="p">:</span> <span class="m">40.37234042553192%</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.row-fluid</span> <span class="nc">.span4</span> <span class="p">{</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">31.914893617021278%</span><span class="p">;</span>
+  <span class="err">*</span><span class="nl">width</span><span class="p">:</span> <span class="m">31.861702127659576%</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.row-fluid</span> <span class="nc">.span3</span> <span class="p">{</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">23.404255319148934%</span><span class="p">;</span>
+  <span class="err">*</span><span class="nl">width</span><span class="p">:</span> <span class="m">23.351063829787233%</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.row-fluid</span> <span class="nc">.span2</span> <span class="p">{</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">14.893617021276595%</span><span class="p">;</span>
+  <span class="err">*</span><span class="nl">width</span><span class="p">:</span> <span class="m">14.840425531914894%</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.row-fluid</span> <span class="nc">.span1</span> <span class="p">{</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">6.382978723404255%</span><span class="p">;</span>
+  <span class="err">*</span><span class="nl">width</span><span class="p">:</span> <span class="m">6.329787234042553%</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<ul>
+  <li>声明后代组合器<code class="language-plaintext highlighter-rouge">.row-fluid .offset1-12</code>，跟在<code class="language-plaintext highlighter-rouge">span*</code>后可以重设左边距向右移动</li>
+  <li><code class="language-plaintext highlighter-rouge">.row-fluid .offset12:first-child</code>第一个<code class="language-plaintext highlighter-rouge">offset*</code>左边距更小？</li>
+</ul>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="nc">.row-fluid</span> <span class="nc">.offset12</span> <span class="p">{</span>
+  <span class="nl">margin-left</span><span class="p">:</span> <span class="m">104.25531914893617%</span><span class="p">;</span>
+  <span class="err">*</span><span class="nl">margin-left</span><span class="p">:</span> <span class="m">104.14893617021275%</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.row-fluid</span> <span class="nc">.offset12</span><span class="nd">:first-child</span> <span class="p">{</span>
+  <span class="nl">margin-left</span><span class="p">:</span> <span class="m">102.12765957446808%</span><span class="p">;</span>
+  <span class="err">*</span><span class="nl">margin-left</span><span class="p">:</span> <span class="m">102.02127659574467%</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.row-fluid</span> <span class="nc">.offset11</span> <span class="p">{</span>
+  <span class="nl">margin-left</span><span class="p">:</span> <span class="m">95.74468085106382%</span><span class="p">;</span>
+  <span class="err">*</span><span class="nl">margin-left</span><span class="p">:</span> <span class="m">95.6382978723404%</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.row-fluid</span> <span class="nc">.offset11</span><span class="nd">:first-child</span> <span class="p">{</span>
+  <span class="nl">margin-left</span><span class="p">:</span> <span class="m">93.61702127659574%</span><span class="p">;</span>
+  <span class="err">*</span><span class="nl">margin-left</span><span class="p">:</span> <span class="m">93.51063829787232%</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.row-fluid</span> <span class="nc">.offset10</span> <span class="p">{</span>
+  <span class="nl">margin-left</span><span class="p">:</span> <span class="m">87.23404255319149%</span><span class="p">;</span>
+  <span class="err">*</span><span class="nl">margin-left</span><span class="p">:</span> <span class="m">87.12765957446807%</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.row-fluid</span> <span class="nc">.offset10</span><span class="nd">:first-child</span> <span class="p">{</span>
+  <span class="nl">margin-left</span><span class="p">:</span> <span class="m">85.1063829787234%</span><span class="p">;</span>
+  <span class="err">*</span><span class="nl">margin-left</span><span class="p">:</span> <span class="m">84.99999999999999%</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.row-fluid</span> <span class="nc">.offset9</span> <span class="p">{</span>
+  <span class="nl">margin-left</span><span class="p">:</span> <span class="m">78.72340425531914%</span><span class="p">;</span>
+  <span class="err">*</span><span class="nl">margin-left</span><span class="p">:</span> <span class="m">78.61702127659572%</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.row-fluid</span> <span class="nc">.offset9</span><span class="nd">:first-child</span> <span class="p">{</span>
+  <span class="nl">margin-left</span><span class="p">:</span> <span class="m">76.59574468085106%</span><span class="p">;</span>
+  <span class="err">*</span><span class="nl">margin-left</span><span class="p">:</span> <span class="m">76.48936170212764%</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.row-fluid</span> <span class="nc">.offset8</span> <span class="p">{</span>
+  <span class="nl">margin-left</span><span class="p">:</span> <span class="m">70.2127659574468%</span><span class="p">;</span>
+  <span class="err">*</span><span class="nl">margin-left</span><span class="p">:</span> <span class="m">70.10638297872339%</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.row-fluid</span> <span class="nc">.offset8</span><span class="nd">:first-child</span> <span class="p">{</span>
+  <span class="nl">margin-left</span><span class="p">:</span> <span class="m">68.08510638297872%</span><span class="p">;</span>
+  <span class="err">*</span><span class="nl">margin-left</span><span class="p">:</span> <span class="m">67.9787234042553%</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.row-fluid</span> <span class="nc">.offset7</span> <span class="p">{</span>
+  <span class="nl">margin-left</span><span class="p">:</span> <span class="m">61.70212765957446%</span><span class="p">;</span>
+  <span class="err">*</span><span class="nl">margin-left</span><span class="p">:</span> <span class="m">61.59574468085106%</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.row-fluid</span> <span class="nc">.offset7</span><span class="nd">:first-child</span> <span class="p">{</span>
+  <span class="nl">margin-left</span><span class="p">:</span> <span class="m">59.574468085106375%</span><span class="p">;</span>
+  <span class="err">*</span><span class="nl">margin-left</span><span class="p">:</span> <span class="m">59.46808510638297%</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.row-fluid</span> <span class="nc">.offset6</span> <span class="p">{</span>
+  <span class="nl">margin-left</span><span class="p">:</span> <span class="m">53.191489361702125%</span><span class="p">;</span>
+  <span class="err">*</span><span class="nl">margin-left</span><span class="p">:</span> <span class="m">53.085106382978715%</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.row-fluid</span> <span class="nc">.offset6</span><span class="nd">:first-child</span> <span class="p">{</span>
+  <span class="nl">margin-left</span><span class="p">:</span> <span class="m">51.063829787234035%</span><span class="p">;</span>
+  <span class="err">*</span><span class="nl">margin-left</span><span class="p">:</span> <span class="m">50.95744680851063%</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.row-fluid</span> <span class="nc">.offset5</span> <span class="p">{</span>
+  <span class="nl">margin-left</span><span class="p">:</span> <span class="m">44.68085106382979%</span><span class="p">;</span>
+  <span class="err">*</span><span class="nl">margin-left</span><span class="p">:</span> <span class="m">44.57446808510638%</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.row-fluid</span> <span class="nc">.offset5</span><span class="nd">:first-child</span> <span class="p">{</span>
+  <span class="nl">margin-left</span><span class="p">:</span> <span class="m">42.5531914893617%</span><span class="p">;</span>
+  <span class="err">*</span><span class="nl">margin-left</span><span class="p">:</span> <span class="m">42.4468085106383%</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.row-fluid</span> <span class="nc">.offset4</span> <span class="p">{</span>
+  <span class="nl">margin-left</span><span class="p">:</span> <span class="m">36.170212765957444%</span><span class="p">;</span>
+  <span class="err">*</span><span class="nl">margin-left</span><span class="p">:</span> <span class="m">36.06382978723405%</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.row-fluid</span> <span class="nc">.offset4</span><span class="nd">:first-child</span> <span class="p">{</span>
+  <span class="nl">margin-left</span><span class="p">:</span> <span class="m">34.04255319148936%</span><span class="p">;</span>
+  <span class="err">*</span><span class="nl">margin-left</span><span class="p">:</span> <span class="m">33.93617021276596%</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.row-fluid</span> <span class="nc">.offset3</span> <span class="p">{</span>
+  <span class="nl">margin-left</span><span class="p">:</span> <span class="m">27.659574468085104%</span><span class="p">;</span>
+  <span class="err">*</span><span class="nl">margin-left</span><span class="p">:</span> <span class="m">27.5531914893617%</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.row-fluid</span> <span class="nc">.offset3</span><span class="nd">:first-child</span> <span class="p">{</span>
+  <span class="nl">margin-left</span><span class="p">:</span> <span class="m">25.53191489361702%</span><span class="p">;</span>
+  <span class="err">*</span><span class="nl">margin-left</span><span class="p">:</span> <span class="m">25.425531914893618%</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.row-fluid</span> <span class="nc">.offset2</span> <span class="p">{</span>
+  <span class="nl">margin-left</span><span class="p">:</span> <span class="m">19.148936170212764%</span><span class="p">;</span>
+  <span class="err">*</span><span class="nl">margin-left</span><span class="p">:</span> <span class="m">19.04255319148936%</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.row-fluid</span> <span class="nc">.offset2</span><span class="nd">:first-child</span> <span class="p">{</span>
+  <span class="nl">margin-left</span><span class="p">:</span> <span class="m">17.02127659574468%</span><span class="p">;</span>
+  <span class="err">*</span><span class="nl">margin-left</span><span class="p">:</span> <span class="m">16.914893617021278%</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.row-fluid</span> <span class="nc">.offset1</span> <span class="p">{</span>
+  <span class="nl">margin-left</span><span class="p">:</span> <span class="m">10.638297872340425%</span><span class="p">;</span>
+  <span class="err">*</span><span class="nl">margin-left</span><span class="p">:</span> <span class="m">10.53191489361702%</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.row-fluid</span> <span class="nc">.offset1</span><span class="nd">:first-child</span> <span class="p">{</span>
+  <span class="nl">margin-left</span><span class="p">:</span> <span class="m">8.51063829787234%</span><span class="p">;</span>
+  <span class="err">*</span><span class="nl">margin-left</span><span class="p">:</span> <span class="m">8.404255319148938%</span><span class="p">;</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+<ul>
+  <li>隐藏和右对齐</li>
+</ul>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">[</span><span class="nt">class</span><span class="o">*=</span><span class="s1">"span"</span><span class="o">]</span><span class="nc">.hide</span><span class="o">,</span>
+<span class="nc">.row-fluid</span> <span class="o">[</span><span class="nt">class</span><span class="o">*=</span><span class="s1">"span"</span><span class="o">]</span><span class="nc">.hide</span> <span class="p">{</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="o">[</span><span class="nt">class</span><span class="o">*=</span><span class="s1">"span"</span><span class="o">]</span><span class="nc">.pull-right</span><span class="o">,</span>
+<span class="nc">.row-fluid</span> <span class="o">[</span><span class="nt">class</span><span class="o">*=</span><span class="s1">"span"</span><span class="o">]</span><span class="nc">.pull-right</span> <span class="p">{</span>
+  <span class="nl">float</span><span class="p">:</span> <span class="nb">right</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+>>>
+        <ol>page, 
+          
+            <li> = </li>
+          
+            <li> = </li>
+          
+            <li> = </li>
+          
+            <li> = </li>
+          
+            <li> = </li>
+          
+            <li> = </li>
+          
+            <li> = </li>
+          
+            <li> = </li>
+          
+            <li> = </li>
+          
+            <li> = </li>
+          
+            <li> = </li>
+          
+            <li> = </li>
+          
+            <li> = </li>
+          
+            <li> = </li>
+          
+            <li> = </li>
+          
+            <li> = </li>
+          
+            <li> = </li>
+          
+            <li> = </li>
+          
+            <li> = </li>
+          
+            <li> = </li>
+          
+            <li> = </li>
+          
+            <li> = </li>
+          
+        </ol>
+        <ol>layout, 0
+          
+        </ol>
+<<<
+      </div>
+    </main>
+
+  <!--<footer class="site-footer h-card">
+  <data class="u-url" href="/blog/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">⛰️</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">⛰️</li><li><a class="u-email" href="mailto:your-email@example.com">your-email@example.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/jekyll"><svg class="svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#github"></use></svg> <span class="username">jekyll</span></a></li><li><a href="https://www.twitter.com/jekyllrb"><svg class="svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">jekyllrb</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+-->
+
+  </body><script src="http://code.jquery.com/jquery.js"></script>
+<script src="/blog/assets/scripts/bootstrap.min.js"></script></html>

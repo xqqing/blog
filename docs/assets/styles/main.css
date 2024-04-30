@@ -10,7 +10,7 @@
   font-weight: 400;
 }
 body {
-  font-family: "华文仿宋", "Monaco", "JetBrains Mono", "Courier New", "Andale Mono", AliFangYuan, SmileySans, "Menlo", "PingFangSC-Regular";
+  font-family: "JetBrains Mono", "苹方-简", "圆体-简", "华文仿宋", SmileySans, AliFangYuan, "Monaco", "Courier New", "Andale Mono", "Menlo";
   font-size: 16px;
   margin: 0;
   padding: 0;
@@ -34,7 +34,12 @@ body .site-header .page-link {
 }
 
 table {
-  font-family: SmileySans;
+  font-family: inherit;
+}
+
+code,
+pre {
+  font-family: inherit;
 }
 
 pre {
@@ -43,6 +48,10 @@ pre {
 
 label {
   margin: unset;
+}
+
+a:hover {
+  text-decoration: none;
 }
 
 .post-header {
@@ -90,6 +99,10 @@ label {
   border: 1px solid #e8e8e8;
   border-radius: 5px;
   text-align: right;
+}
+
+.label {
+  font-weight: initial;
 }
 
 .site-header .wrapper {
