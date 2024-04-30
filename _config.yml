@@ -63,6 +63,18 @@ collections:
     output: true
   css: #font/text/selector
     output: true
+  html: #元素/属性
+    output: true
+  elements: #HTML全部元素
+    output: true
+  x: #相关知识
+    output: true
+  jekyll: #jekyll专辑
+    output: true
+  bootstrap: 
+    output: true
+  js:
+    output: true
     
 
 # defaults:
