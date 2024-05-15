@@ -10,7 +10,7 @@
   font-weight: 400;
 }
 body {
-  font-family: "JetBrains Mono", "苹方-简", "圆体-简", "华文仿宋", SmileySans, AliFangYuan, "Monaco", "Courier New", "Andale Mono", "Menlo";
+  font-family: "JetBrains Mono", "苹方-简", "圆体-简", "华文仿宋", SmileySans, AliFangYuan;
   font-size: 16px;
   margin: 0;
   padding: 0;
@@ -37,9 +37,13 @@ table {
   font-family: inherit;
 }
 
+li {
+  line-height: 24px;
+}
+
 code,
 pre {
-  font-family: inherit;
+  font-family: Menlo, Monaco, "Courier New", "Andale Mono";
 }
 
 pre {
