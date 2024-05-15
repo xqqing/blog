@@ -10,7 +10,7 @@
     <main class="page-content" aria-label="Content">
       <div class="wrapper">
         {{ content }}
->>>
+        {% comment %} >>>
         <ol>page, {{ page.size }}
           {% for item in page %}
             <li>{{ item[0] }} = {{ item[1] }}</li>
@@ -21,7 +21,7 @@
             <li>{{ item[0] }} = {{ item[1] }}</li>
           {% endfor %}
         </ol>
-<<<
+        <<< {% endcomment %}
       </div>
     </main>
 
