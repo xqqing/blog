@@ -4,6 +4,8 @@ layout: default
 
 
 <div class="collections">
+  {{ content }}
+
   <table>
     <tr>
       <th>文章</th>
@@ -27,10 +29,8 @@ layout: default
         </td>
       </tr>
       {% comment %} {% for elem in item %}
-                                                                                                                                                                                                                                                                                                                                                                                                                                                            {{ elem }} = {{ item[elem] }}
-                                                                                                                                                                                                                                                                                                                                              {% endfor %} {% endcomment %}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                    {{ elem }} = {{ item[elem] }}
+                                                                                                                                                                                                                                                                                                                                                    {% endfor %} {% endcomment %}
     {% endfor %}
   </table>
-  {{ content }}
-
 </div>
