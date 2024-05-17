@@ -1,4 +1,4 @@
 ---
-layout: home
+title: Android
 ---
 {{ page.name }}

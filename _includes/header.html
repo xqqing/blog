@@ -1,61 +1,82 @@
 <header class="site-header" role="banner">
-  <div class="wrapper">
-    {%- assign default_paths = site.pages | map: "path" -%}
-    {%- assign page_paths = site.header_pages | default: default_paths -%}
+  <div class="navbar navbar-static-top">
+    <div class="navbar-inner">
+      <div class="wrapper">
+        <div class="container">
+          <div class="layout">
+            {%- assign default_paths = site.pages | map: "path" -%}
+            {%- assign page_paths = site.header_pages | default: default_paths -%}
 
-    <a
-      class="site-title"
-      rel="author"
-      href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+            <a class="site-title" rel="author" href="{{ '/' | relative_url }}">{{ site.title }}</a>
 
-    {% comment %} 中间导航 {% endcomment %}
-    <ul class="btn-group">
-      {% for item in site.web %}
-        <li class="btn-group">
-          <a
-            class="btn dropdown dropdown-toggle"
-            data-toggle="dropdown"
-            href="#">
+            <!-- 中间导航 -->
+            <ul class="nav">
+              {% for item in site.app %}
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                  {{ item.title }}<span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                  {% assign top = site[item.slug] %}
+                  {% if top.size > 0 %}
+                  {% assign first = top[0] %}
+                  <!-- {{first.title}} -->
+                  {% for item2 in site[item.slug] %}
+                  {% if first != item2 %}
+                  <li class="divider"></li>
+                  {% endif %}
+                  <li class="disabled">
+                    <a href="{{item2.url|relative_url}}">{{ item2.title|upcase
+                      }}({{site[item2.slug].size|default:0}})</a>
+                  </li>
+
+                  {% for item3 in site[item2.slug] %}
+                  <li>
+                    <a href="{{item3.url|relative_url}}">{{ item3.title }}</a>
+                  </li>
+                  {% endfor %}
+                  {% endfor %}
+                  {% else %}
+                  <li class="disabled">
+                    <a href="">暂无分类</a>
+                  </li>
+
+                  {% endif %}
+                </ul>
+              </li>
+              {% endfor %}
+            </ul>
+            <a class="page-link" href="{{ '/words/' | relative_url }}">🎯</a>
+          </div>
+        </div>
+
+        <!-- </div> -->
+
+      </div>
+    </div>
+  </div>
+  <!-- <div class="wrapper">
+  <div class="navbar">
+    <div class="navbar-inner">
+      <a class="brand" href="#">Title</a>
+      <ul class="nav">
+        {% for item in site.web %}
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">
             {{ item.title | upcase }}
-            <span class="caret"></span>
+            <b class="caret"></b>
           </a>
           <ul class="dropdown-menu">
             {% for item2 in site[item.slug] %}
-              <li>
-                <a href="{{item2.url|relative_url}}">{{ item2.title }}</a>
-              </li>
+            <li>
+              <a href="{{item2.url|relative_url}}">{{ item2.title }}</a>
+            </li>
             {% endfor %}
           </ul>
         </li>
-      {% endfor %}
-    </ul>
-
-    <div class="navbar">
-      <div class="navbar-inner">
-        <a class="brand" href="#">Title</a>
-        <ul class="nav">
-          {% for item in site.web %}
-            <li class="dropdown">
-              <a
-                class="dropdown-toggle"
-                data-toggle="dropdown"
-                href="#">
-                {{ item.title | upcase }}
-                <b class="caret"></b>
-              </a>
-              <ul class="dropdown-menu">
-                {% for item2 in site[item.slug] %}
-                  <li>
-                    <a href="{{item2.url|relative_url}}">{{ item2.title }}</a>
-                  </li>
-                {% endfor %}
-              </ul>
-            </li>
-          {% endfor %}
-        </ul>
-      </div>
+        {% endfor %}
+      </ul>
     </div>
-
-    <a class="page-link" href="{{ '/words/' | relative_url }}">🎯</a>
   </div>
+  </div> -->
 </header>

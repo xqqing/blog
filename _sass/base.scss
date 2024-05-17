@@ -12,16 +12,12 @@ body {
     // position: absolute;
 
     .site-header {
-        min-height: 54px;
+        // min-height: 54px;
         background-color: white;
         position: sticky;
         top: 0;
         border-top: 0;
         min-height: unset; //非继承属性时unset相当于initial
-
-        .site-title {
-            font-size: 34px;
-        }
 
         .page-link {
             font-size: medium;

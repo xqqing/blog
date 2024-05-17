@@ -1,4 +1,4 @@
 ---
-title: iOS
+title: Web
 ---
 {{ page.name }}

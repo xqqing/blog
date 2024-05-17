@@ -59,6 +59,8 @@ destination: docs #q:设置输出目录
 # collections_dir: _guides #q:设置集合目录，_posts也是集合也要修改
 
 collections:
+  app:
+    output: true
   web: #html/css/js
     output: true
   css: #font/text/selector
@@ -70,6 +72,8 @@ collections:
   x: #相关知识
     output: true
   jekyll: #jekyll专辑
+    output: true
+  liquid:
     output: true
   bootstrap: 
     output: true
